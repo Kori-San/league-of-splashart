@@ -1,1 +1,6 @@
+# Default folder
 download/
+
+# Logs
+log/
+*.log
