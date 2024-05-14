@@ -70,7 +70,7 @@ show_progress() {
         fi
     done
     progress_bar+="] $percent% ($current/$total)"
-    echo -ne "$progress_bar"
+    echo -ne "$progress_bar\r"
 }
 
 # Loop through all champions
@@ -80,7 +80,6 @@ for champion in $champion_list; do
 
     # Show progress
     show_progress $current_champion $total_champions
-    echo -ne " - Downloading: $champion\r"
 
     if [ "$use_subdirectories" = true ]; then
         champion_dir="$download_dir/$champion"
